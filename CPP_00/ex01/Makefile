@@ -1,7 +1,7 @@
 # ----------- EXECUTABLE -----------
 
 NAME		=	phonebook
-DESCRIPTION =	Piscine CPP, Day 00 - ex00
+DESCRIPTION =	Piscine CPP, Day 00 - ex01
 
 # ----------- COMPILER FLAGS -------
 

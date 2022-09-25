@@ -1,7 +1,7 @@
 # ----------- EXECUTABLE -----------
 
-NAME		=	test_bank
-DESCRIPTION =	Piscine CPP, Day 00 - ex02
+NAME		=	violence
+DESCRIPTION =	Piscine CPP, Day 01 - ex03
 
 # ----------- COMPILER FLAGS -------
 
@@ -10,7 +10,7 @@ CFLAGS		+=	-Wall -Wextra -Werror -g3 -std=c++98
 
 # ----------- FILES ----------------
 
-SRCS		=	Account.cpp tests.cpp
+SRCS		=	main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 
 # ----------- COLORS ---------------

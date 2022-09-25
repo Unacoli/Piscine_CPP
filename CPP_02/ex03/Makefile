@@ -1,7 +1,7 @@
 # ----------- EXECUTABLE -----------
 
-NAME		=	test_bank
-DESCRIPTION =	Piscine CPP, Day 00 - ex02
+NAME		=	BSP
+DESCRIPTION =	Piscine CPP, Day 02 - ex03
 
 # ----------- COMPILER FLAGS -------
 
@@ -10,7 +10,7 @@ CFLAGS		+=	-Wall -Wextra -Werror -g3 -std=c++98
 
 # ----------- FILES ----------------
 
-SRCS		=	Account.cpp tests.cpp
+SRCS		=	main.cpp Fixed.cpp Point.cpp bsp.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 
 # ----------- COLORS ---------------
