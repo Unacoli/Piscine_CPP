@@ -10,7 +10,7 @@ CFLAGS		+=	-Wall -Wextra -Werror -g3 -std=c++98
 
 # ----------- FILES ----------------
 
-SRCS		=	main.cpp Zombie.cpp ZombieHorde.cpp
+SRCS		=	main.cpp Zombie.cpp zombieHorde.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 
 # ----------- COLORS ---------------
