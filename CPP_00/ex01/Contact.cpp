@@ -71,7 +71,7 @@ std::string    Contact::TruncColumn(Contact *contact, std::string Type)
         return (str);
 }
 
-void    Contact::PrintContact(Contact contact)
+void    Contact::PrintContact(Contact contact) const
 {
     std::cout << "First Name     = " << contact.FirstName << std::endl;
     std::cout << "Last Name      = " << contact.LastName << std::endl;
@@ -79,6 +79,7 @@ void    Contact::PrintContact(Contact contact)
     std::cout << "Phone Number   = " << contact.PhoneNumber << std::endl;
     std::cout << "Darkest Secret = " << contact.DarkestSecret << std::endl;
     std::cout << std::endl;
+    return ;
 }
 
 int Contact::is_empty(Contact contact)

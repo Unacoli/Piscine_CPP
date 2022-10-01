@@ -16,7 +16,7 @@ class Contact {
         ~Contact(void);
         void    Informations(std::string Type, Contact *contact);
         static std::string  TruncColumn(Contact *contact, std::string Type);
-        void    PrintContact(Contact contact);
+        void    PrintContact(Contact contact) const;
         static int  is_empty(Contact contact);
 };
 

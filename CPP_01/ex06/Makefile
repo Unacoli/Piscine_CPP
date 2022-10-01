@@ -1,6 +1,6 @@
 # ----------- EXECUTABLE -----------
 
-NAME		=	harl_filter
+NAME		=	HarlFilter
 DESCRIPTION =	Piscine CPP, Day 01 - ex06
 
 # ----------- COMPILER FLAGS -------
@@ -49,6 +49,6 @@ fclean		: clean
 	@echo "$(PURPLE)"
 		$(RM) $(NAME)
 
-re			: fclean all bonus
+re			: fclean all 
 
 .PHONY: all clean fclean re
