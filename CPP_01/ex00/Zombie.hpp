@@ -4,7 +4,7 @@
 # include <string>
 # include <cstdlib>
 
-class Zombie
+class   Zombie
 {
 private:
     std::string name;
