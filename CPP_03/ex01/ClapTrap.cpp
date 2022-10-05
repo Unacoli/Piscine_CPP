@@ -1,12 +1,12 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void) : _name("ClapTrap"), _hp(10), _ep(10), _dmg(0)
+ClapTrap::ClapTrap(void) : _name("ClapTrap"), _hp(10), _ep(10), _dmg(10)
 {
     std::cout << "Default constructor called" << std::endl;
     return ;
 }
 
-ClapTrap::ClapTrap(std::string const Name) : _name(Name), _hp(10), _ep(10), _dmg(0)
+ClapTrap::ClapTrap(std::string const Name) : _name(Name), _hp(10), _ep(10), _dmg(10)
 {
     std::cout << "ClapTrap " << _name << " constructor called" << std::endl;
     return ;
@@ -15,13 +15,13 @@ ClapTrap::ClapTrap(std::string const Name) : _name(Name), _hp(10), _ep(10), _dmg
 ClapTrap::ClapTrap(ClapTrap const &src)
 {
     *this = src;
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "ClapTrap copy constructor called" << std::endl;
     return ;
 }
 
 ClapTrap::~ClapTrap(void)
 {
-    std::cout << "Deconstructor called" << std::endl;
+    std::cout << "ClapTrap " << _name << " deconstructor called" << std::endl;
     return ;
 }
 
