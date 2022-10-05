@@ -6,7 +6,7 @@ DESCRIPTION =	Piscine CPP, Day 06 - ex02
 # ----------- COMPILER FLAGS -------
 
 CC			=	c++
-CFLAGS		+=	-Wall -Wextra -Werror -g3 -std=c++98
+CFLAGS		+=	-Wall -Wextra -Werror -Wshadow -Wno-shadow -g3 -std=c++98
 
 # ----------- FILES ----------------
 
