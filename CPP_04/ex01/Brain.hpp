@@ -12,7 +12,7 @@ class Brain
         Brain(Brain const &src);
         ~Brain(void);
         Brain& operator=(Brain const &rhs);
-        std::string generateRandomWords(int n);
+        std::string generateRandomIdea(void);
         void    printMind(int n);
 };
 
