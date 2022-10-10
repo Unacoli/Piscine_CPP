@@ -1,7 +1,7 @@
 # ----------- EXECUTABLE -----------
 
-NAME		=	abstraction
-DESCRIPTION =	Piscine CPP, Day 04 - ex02
+NAME		=	abstract
+DESCRIPTION =	Piscine CPP, Day 04 - ex01
 
 # ----------- COMPILER FLAGS -------
 
@@ -10,7 +10,7 @@ CFLAGS		+=	-Wall -Wextra -Werror -Wshadow -Wno-shadow -g3 -std=c++98
 
 # ----------- FILES ----------------
 
-SRCS		=	main.cpp
+SRCS		=	main.cpp Cat.cpp Dog.cpp Animal.cpp Brain.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 
 # ----------- COLORS ---------------
