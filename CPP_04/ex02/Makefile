@@ -1,7 +1,7 @@
 # ----------- EXECUTABLE -----------
 
 NAME		=	abstract
-DESCRIPTION =	Piscine CPP, Day 04 - ex01
+DESCRIPTION =	Piscine CPP, Day 04 - ex02
 
 # ----------- COMPILER FLAGS -------
 
