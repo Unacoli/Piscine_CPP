@@ -1,8 +1,11 @@
-#ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
+#ifndef BUREAUCRAT_H
+# define BUREAUCRAT_H
 # include <string>
 # include <iostream>
 # include <limits>
+# include "AForm.hpp"
+
+class   AForm;
 
 class Bureaucrat
 {
@@ -14,11 +17,13 @@ class Bureaucrat
         Bureaucrat(std::string name, int grade);
         Bureaucrat(Bureaucrat const &src);
         ~Bureaucrat(void);
-        Bureaucrat& operator=(Bureaucrat const &rhs);
+        Bureaucrat & operator=(Bureaucrat const &rhs);
         std::string const getName(void) const;
         int getGrade(void) const;
         void    upGrade(void);
         void    downGrade(void);
+        void    signForm(AForm &form) const;
+        void    executeForm(AForm const &form);
     class   GradeTooHighException : public std::exception
     {
         public:

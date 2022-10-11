@@ -31,7 +31,7 @@ Bureaucrat::~Bureaucrat(void)
     return ;
 }
 
-Bureaucrat& Bureaucrat::operator=(Bureaucrat const &rhs)
+Bureaucrat & Bureaucrat::operator=(Bureaucrat const &rhs)
 {
     if (this != &rhs)
         this->_grade = rhs.getGrade();
@@ -51,6 +51,41 @@ void    Bureaucrat::downGrade(void)
     if (this->_grade >= 150)
         throw (GradeTooLowException());
     this->_grade++;
+    return ;
+}
+
+void    Bureaucrat::signForm(AForm &AForm) const
+{
+    try
+    {
+        AForm.getSign();
+    }
+    catch(const std::exception &except)
+    {
+        return ;
+    }
+    try
+    {
+        AForm.beSigned(*this);
+    }
+    catch(const std::exception &except)
+    {
+        return ;
+    }
+    return ;
+}
+
+void    Bureaucrat::executeForm(AForm const &form)
+{
+    try
+    {
+        form.execute(*this);
+        std::cout << this->getName() << " executed " << form.getName() << std::endl;
+    }
+    catch(const std::exception &except)
+    {
+        std::cerr << this->getName() << " could not execute this form : " << except.what() << std::endl;
+    }
     return ;
 }
 
