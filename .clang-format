@@ -1,0 +1,196 @@
+---
+
+#############
+# Validated #
+#############
+
+# These clang-format rules have been collaboratively approved and should be followed be all the subprojects.
+# See the reasons at https://framagit.org/perdumondrapeau/main/-/wikis/CPP-Code-Convention
+
+# Global
+Language: Cpp
+Standard: Auto
+ColumnLimit: 100
+
+# Indentation
+ConstructorInitializerIndentWidth: 4
+ContinuationIndentWidth: 4
+IndentAccessModifiers: false
+IndentCaseBlocks: false
+IndentCaseLabels: true
+IndentGotoLabels: false
+IndentExternBlock: NoIndent
+IndentWidth: 4
+LambdaBodyIndentation: Signature
+NamespaceIndentation: Inner
+TabWidth: 4
+UseTab: Never
+
+# Spacing
+SpaceAfterLogicalNot: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCpp11BracedList: true
+Cpp11BracedListStyle: false
+PointerAlignment: Middle
+SpaceAroundPointerQualifiers: Both
+SpaceBeforeCaseColon: false
+SpaceBeforeSquareBrackets: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeParens: ControlStatements
+SpacesInConditionalStatement: false
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
+SpacesInAngles: false
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: -1
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SpaceBeforeCpp11BracedList: true
+SpaceAfterTemplateKeyword: false
+SpacesInCStyleCastParentheses: false
+SpaceAfterCStyleCast: false
+BitFieldColonSpacing: Both
+# [Not available] SpaceBeforeSquareBrackets: false
+# [Not available] SpaceInEmptyBlock: false
+
+# Alignment
+AlignAfterOpenBracket : Align
+# Unusable because it is applied in unwanted places
+# AlignArrayOfStructures: Right
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignConsecutiveBitFields: false
+AlignEscapedNewlines: Left
+AlignOperands: true
+AlignTrailingComments: true
+AlignConsecutiveMacros: true
+ReferenceAlignment: Middle
+
+# Short on single line
+AllowShortEnumsOnASingleLine: true
+AlwaysBreakTemplateDeclarations: MultiLine
+ShortNamespaceLines: 0
+
+# Breaks
+# This appears to be a boolean for now, as opposed to the doc.
+# Enable this when it's fixed
+# BreakBeforeConceptDeclarations: Allowed
+
+# Includes
+IncludeBlocks: Preserve
+IncludeIsMainRegex: '$'
+IncludeCategories:
+  - Regex: '^<nlc/.*>'
+    Priority: 2
+  - Regex: '^<.*\.h(pp)?>'
+    Priority: 3
+  - Regex: '^<.*'
+    Priority: 1
+  - Regex: '^.*/.*'
+    Priority: 4
+  - Regex: '.*'
+    Priority: 5
+SortIncludes: true
+
+# Empty lines
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: LogicalBlock
+
+# Line endings
+# Let git handle this
+# DeriveLineEnding
+# UseCRLF
+
+# Special macros
+StatementMacros: [
+  COMPONENT,
+  COMPONENT_WITH_NAMESPACE,
+  TAG,
+  TAG_WITH_NAMESPACE,
+  TAG_AND_DESC,
+  TAG_AND_DESC_WITH_NAMESPACE
+  DESCRIPTOR,
+  DESCRIPTOR_WITH_NAMESPACE,
+]
+# StatementAttributeLikeMacros
+# WhitespaceSensitiveMacro
+
+# Others
+FixNamespaceComments: true
+SortUsingDeclarations: true
+
+################
+# Experimental #
+################
+
+ReflowComments: true
+
+# Indentation
+IndentWrappedFunctionNames: false
+AccessModifierOffset: -2
+IndentPPDirectives: AfterHash
+IndentRequires: true
+
+# Short on single line
+AllowShortBlocksOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: true
+AllowShortLambdasOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+BinPackArguments: false
+BinPackParameters: false
+
+# Breaks
+AllowAllArgumentsOnNextLine: false
+AllowAllConstructorInitializersOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: false
+  AfterControlStatement: false
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: false
+  BeforeElse: false
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: true
+BreakBeforeBinaryOperators: None
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: BeforeComma
+BreakStringLiterals: true
+CompactNamespaces: false
+
+PenaltyBreakAssignment: 1
+PenaltyBreakBeforeFirstCallParameter: 100
+PenaltyBreakComment: 1
+PenaltyBreakFirstLessLess: 1
+PenaltyBreakString: 1
+PenaltyBreakTemplateDeclaration: 1
+PenaltyExcessCharacter: 5
+PenaltyReturnTypeOnItsOwnLine: 100
+
+# Empty lines
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+
+# Spacing
+SpacesInContainerLiterals: true
+
+...
