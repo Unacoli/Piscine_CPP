@@ -53,7 +53,7 @@ void    Phonebook::Search(Phonebook *phonebook)
         return ;
     }
     std::cout << "|  index   |first name| last name| nickname |" << std::endl;
-    while (i < 7 && !Contact::is_empty(contact[i]))
+    while (i < 8 && !Contact::is_empty(contact[i]))
     {
         std::cout << "|    " << i + 1 << "     |";
         std::cout << Contact::TruncColumn(&contact[i], "First Name") << "|";
