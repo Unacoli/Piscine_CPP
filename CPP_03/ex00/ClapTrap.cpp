@@ -64,7 +64,7 @@ void    ClapTrap::takeDamage(unsigned int amount)
 
 void    ClapTrap::beRepaired(unsigned int amount)
 {
-    if (--_ep = 0)
+    if (--_ep < 0)
         std::cout << "ClapTrap" << _name << " is KO. Repair him." << std::endl;
     else
     {
