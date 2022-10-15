@@ -7,7 +7,7 @@ Character::Character(void) : _name("Default")
     std::cout << "Character default constructor called" << std::endl;
     while (i < 4)
     {
-        inventory[i] = NULL;
+        this->inventory[i] = NULL;
         i++;
     }
     return ;
@@ -20,16 +20,22 @@ Character::Character(std::string name) : _name(name)
     std::cout << "Character " << this->getName() << " constructor called" << std::endl;
     while (i < 4)
     {
-        inventory[i] = NULL;
+        this->inventory[i] = NULL;
         i++;
     }
     return ;
 }
 
-Character::Character(const Character &src)
+Character::Character(const Character &src) : _name(src.getName())
 {
+    int i = 0;
     std::cout << "Character " << this->getName() << " copy constructor called" << std::endl;
-    *this = src;
+    while (i < 4)
+    {
+        if ((src.inventory)[i])
+            (this->inventory)[i] = (src.inventory)[i]->clone();
+        i++;
+    }
     return ;
 }
 
@@ -39,8 +45,8 @@ Character::~Character(void)
     std::cout << "Character " << this->getName() << " destructor called" << std::endl;
     while (i < 4)
     {
-        if (inventory[i])
-            delete(inventory[i]);
+        if (this->inventory[i])
+            delete(this->inventory[i]);
         i++;
     }
     return ;
@@ -50,19 +56,13 @@ Character& Character::operator=(Character const &rhs)
 {
     int i = 0;
 
-    if (this != &rhs)
+    while (i < 4)
     {
-        this->_name = rhs.getName();
-        while (i < 4)
-        {
-            if (this->inventory[i] != NULL)
-                delete(this->inventory[i]);
-            if (rhs.inventory[i] != NULL)
-                this->inventory[i] = rhs.inventory[i]->clone();
-            else
-                this->inventory[i] = NULL;
-            i++;
-        }
+        if (this->inventory[i])
+            delete(this->inventory[i]);
+        if (rhs.inventory[i])
+            this->inventory[i] = (rhs.inventory[i])->clone();
+        i++;
     }
     return (*this);
 }

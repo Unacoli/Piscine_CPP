@@ -33,6 +33,11 @@ int main(void)
     Mercy->use(0, *Ana);
     Mercy->use(2, *Ana);
     Mercy->use(1, *Ana);
+
+    Character *Lucio = new Character("Lucio");
+    Character *Moira = new Character(*Lucio);
+    Moira->equip(owo);
+    Moira->use(0, *Lucio);
     
     delete (Ana);
     delete (Mercy);
