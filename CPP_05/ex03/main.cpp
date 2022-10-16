@@ -7,6 +7,8 @@
 
 int main(void)
 {
+    srand(time(0));
+    
     Intern  intern;
     AForm* form1 = NULL;
     form1 = intern.makeForm("RobotomyRequestForm", "Robot");

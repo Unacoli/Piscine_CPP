@@ -124,6 +124,8 @@ void    RobotError(void)
 
 int main(void)
 {
+    srand(time(0));
+    
     ShrubberyOK();
     ShrubberyError();
     PresidentOK();
