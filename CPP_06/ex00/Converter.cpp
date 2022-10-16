@@ -40,8 +40,15 @@ std::string Converter::getStr(void) const
 Converter::operator char()
 {
     char c = 0;
-    int d = atoi(_str.c_str());
 
+    if (_str.size() == 1 && isprint(_str[0]))
+    {
+        c = _str[0];
+        std::cout << "char: " << c << std::endl;
+        return (c);
+    }
+
+    int d = atoi(_str.c_str());
     if (d < CHAR_MIN || d > CHAR_MAX)
     {
         std::cout << "char: overflow" << std::endl;
@@ -58,6 +65,13 @@ Converter::operator char()
 Converter::operator int()
 {
     int d = 0;
+
+    if (_str.size() == 1 && !isdigit(_str[0]))
+    {
+        d = _str[0];
+        std::cout << "int: " << d << std::endl;
+        return (d);
+    }
 
     if ((d = atoi(_str.c_str())) == 0 && _str != "0")
     {
@@ -76,6 +90,13 @@ Converter::operator int()
 Converter::operator float()
 {
     float   f = 0;
+
+    if (_str.size() == 1 && !isdigit(_str[0]))
+    {
+        f = _str[0];
+        std::cout << "float: " << f << std::endl;
+        return (f);
+    }
 
     if ((f = atof(_str.c_str())) == 0 && _str != "0")
     {
@@ -106,6 +127,13 @@ Converter::operator float()
 Converter::operator double()
 {
     double  db = 0;
+
+    if (_str.size() == 1 && !isdigit(_str[0]))
+    {
+        db = _str[0];
+        std::cout << "double: " << db << std::endl;
+        return (db);
+    }
 
     if ((db = strtod(_str.c_str(), NULL)) == (0.0) && _str != "0")
     {
