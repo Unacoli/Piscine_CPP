@@ -65,6 +65,7 @@ Converter::operator char()
 Converter::operator int()
 {
     int d = 0;
+    long int max_min = 0;
 
     if (_str.size() == 1 && !isdigit(_str[0]))
     {
@@ -73,15 +74,16 @@ Converter::operator int()
         return (d);
     }
 
-    if ((d = atoi(_str.c_str())) == 0 && _str != "0")
+    if ((d = strtol(_str.c_str(), NULL, 10)) == 0 && _str != "0")
     {
         std::cout << "int: Non displayable" << std::endl;
         return (d);
     }
-    if (d < INT_MIN || d > INT_MAX)
+    max_min = strtol(_str.c_str(), NULL, 10);
+    if (max_min == LONG_MAX || max_min == LONG_MIN)
     {
         std::cout << "int: overflow" << std::endl;
-        return (d);
+        return (max_min);
     }
     std::cout << "int: " << d << std::endl;
     return (d);
