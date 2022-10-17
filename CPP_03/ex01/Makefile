@@ -35,7 +35,7 @@ ${NAME}		: $(OBJS)
 	@echo "$(BLUE) =====> Build $(DESCRIPTION) DONE √ <====="
 	@echo -n "$(EOC)"
 
-.c.o:
+%.o: %.cpp
 	@echo -n "$(PURPLE)"
 		$(CC) $(CFLAGS) -c $< -o $@
 

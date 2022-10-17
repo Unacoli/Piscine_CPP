@@ -2,7 +2,6 @@
 #include <list>
 #include <vector>
 #include <set>
-#include <array>
 
 void    displayInt(int i)
 {

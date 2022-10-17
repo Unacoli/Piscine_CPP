@@ -11,7 +11,7 @@ CFLAGS		+=	-Wall -Wextra -Werror -g3 -std=c++98
 # ----------- FILES ----------------
 
 SRCS		=	main.cpp Fixed.cpp Point.cpp bsp.cpp
-OBJS		=	$(SRCS:.cpp=.o)
+OBJS		=	$(SRCS:%.cpp=%.o)
 
 # ----------- COLORS ---------------
 
@@ -35,7 +35,7 @@ ${NAME}		: $(OBJS)
 	@echo "$(BLUE) =====> Build $(DESCRIPTION) DONE √ <====="
 	@echo -n "$(EOC)"
 
-.c.o:
+%.o: %.cpp
 	@echo -n "$(PURPLE)"
 		$(CC) $(CFLAGS) -c $< -o $@
 

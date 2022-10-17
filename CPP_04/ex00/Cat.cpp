@@ -9,6 +9,7 @@ Cat::Cat(void)
 
 Cat::Cat(Cat const &src)
 {
+    this->type = src.type;
     std::cout << this->type << " copy constructor called" << std::endl;
     return ;
 }
