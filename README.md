@@ -1,5 +1,5 @@
 # Piscine_CPP
-9 modules to discover CPP
+10 modules to discover CPP
 
 ## C++ - Module 00
 Namespaces, classes, member functions, stdio streams,
@@ -40,3 +40,6 @@ This module has been validated with a score of 100/100.
 ## C++ - Module 08
 Templated containers, iterators, algorithms\
 This module has been validated with a score of 100/100.
+
+## C++ - Module 09
+STL
