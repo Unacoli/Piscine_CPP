@@ -1,6 +1,6 @@
 # ----------- EXECUTABLE -----------
 
-NAME		=	Reverse
+NAME		=	RPN
 DESCRIPTION =	Piscine CPP, Day 09 - ex01
 
 # ----------- COMPILER FLAGS -------
@@ -10,7 +10,7 @@ CFLAGS		+=	-Wall -Wextra -Werror -Wshadow -Wno-shadow -g3 -std=c++98
 
 # ----------- FILES ----------------
 
-SRCS		=	main.cpp 
+SRCS		=	main.cpp RPN.cpp
 OBJS		=	$(SRCS:%.cpp=%.o)
 
 # ----------- COLORS ---------------

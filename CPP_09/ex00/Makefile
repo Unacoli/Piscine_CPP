@@ -1,6 +1,6 @@
 # ----------- EXECUTABLE -----------
 
-NAME		=	Bitcoin
+NAME		=	Btc
 DESCRIPTION =	Piscine CPP, Day 09 - ex00
 
 # ----------- COMPILER FLAGS -------
@@ -10,7 +10,7 @@ CFLAGS		+=	-Wall -Wextra -Werror -Wshadow -Wno-shadow -g3 -std=c++98
 
 # ----------- FILES ----------------
 
-SRCS		=	main.cpp 
+SRCS		=	main.cpp BitcoinExchange.cpp 
 OBJS		=	$(SRCS:%.cpp=%.o)
 
 # ----------- COLORS ---------------

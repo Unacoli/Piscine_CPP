@@ -10,7 +10,7 @@ CFLAGS		+=	-Wall -Wextra -Werror -Wshadow -Wno-shadow -g3 -std=c++98
 
 # ----------- FILES ----------------
 
-SRCS		=	main.cpp 
+SRCS		=	main.cpp PmergeMe.cpp 
 OBJS		=	$(SRCS:%.cpp=%.o)
 
 # ----------- COLORS ---------------
