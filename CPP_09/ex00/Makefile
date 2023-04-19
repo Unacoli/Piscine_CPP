@@ -1,6 +1,6 @@
 # ----------- EXECUTABLE -----------
 
-NAME		=	Btc
+NAME		=	btc
 DESCRIPTION =	Piscine CPP, Day 09 - ex00
 
 # ----------- COMPILER FLAGS -------
