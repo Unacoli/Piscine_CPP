@@ -29,28 +29,31 @@ PmergeMe& PmergeMe::operator=(PmergeMe const &rhs)
 
 void    PmergeMe::mergeMe(char **args, int len)
 {
-    int i = 1, tmp, j;
+    int i = 1, tmp, j = 0;
     this->_size = len;
     float tmp_vec, tmp_deq;
 
-    std::cout << "Before: ";
-    while (args[i])
+    if (len == 2)
+    {
+        std::cout << "One number, no sorting necessary" << std::endl;
+        return ;
+    }
+    while (args[i][j])
     {
         j = 0;
-        if (args[i][0] == '\0')
+        if (!isdigit(args[i][j]))
         {
             std::cout << "Error" << std::endl;
             return ;
         }
-        while (args[i][j])
-        {
-            if (!isdigit(args[i][j]))
-            {
-                std::cout << "Error" << std::endl;
-                return ;
-            }
-            j++;
-        }
+        i++;
+        j++;
+    }
+
+    i = 1; 
+    std::cout << "Before: ";
+    while (args[i])
+    {
         std::stringstream ss(args[i]);
         ss >> tmp;
         if (tmp < 0)
@@ -62,6 +65,7 @@ void    PmergeMe::mergeMe(char **args, int len)
         this->_deq.push_back(tmp);
         i++;
     }
+    
     clock_t time = clock();
     merge_insert_sort(this->_vec);
     tmp_vec = (float)(clock() - time);
@@ -74,11 +78,12 @@ void    PmergeMe::mergeMe(char **args, int len)
     while (args[i])
     {
         std::cout << args[i] << " ";
-        ++i;
+        i++;
     }
-    std::cout << tmp << std::endl;
+    std::cout << std::endl;
+
     std::cout << "After: ";
-    for (size_t i = 0; i < _vec.size(); ++i)
+    for (size_t i = 0; i < _vec.size(); i++)
     {
         std::cout << _vec[i] << " ";
     }
