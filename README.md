@@ -43,3 +43,4 @@ This module has been validated with a score of 100/100.
 
 ## C++ - Module 09
 STL
+This module has been validated with a score of 100/100.
